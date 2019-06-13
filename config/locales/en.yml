@@ -31,3 +31,27 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      user:
+        fname: "First Name"
+    errors:
+      models:
+        user:
+          attributes:
+            fname:
+              blank: "is required"
+
+en:
+  activerecord:
+    attributes:
+      user:
+        lname: "Last Name"
+    errors:
+      models:
+        user:
+          attributes:
+            lname:
+              blank: "is required"
