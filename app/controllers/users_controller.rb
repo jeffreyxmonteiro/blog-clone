@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-  # before_action :only_see_own_page, only: [:show]
+  before_action :only_see_own_page, only: [:show]
 
   def show
     @user = User.find(params[:id])
@@ -12,9 +11,9 @@ class UsersController < ApplicationController
 
  private
 
-  # def only_see_own_page
-  #   if current_user.id != params[:id]
-  #     redirect_to root_path, notice: "Sorry, but you are only allowed to view your own profile page."
-  #   end
-  # end
+  def only_see_own_page
+    if current_user.id != params[:id].to_i
+      redirect_to root_path, notice: "Sorry, but you are only allowed to view your own profile page."
+    end
+  end
 end
