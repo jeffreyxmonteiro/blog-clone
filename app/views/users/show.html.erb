@@ -9,4 +9,5 @@ Current User's ID is <%= @user.id %>
   <p>Quoter: <%= snipp.quoter %></p>
   <p>Takeaway: <%= snipp.takeaway %></p>
   <p>Source: <%= snipp.source %></p>
+  <p><%= link_to "Delete", snipp_path(snipp), method: :delete %></p>
 <% end %>

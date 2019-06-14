@@ -14,6 +14,12 @@ class SnippsController < ApplicationController
     end
   end
 
+  def destroy
+    @snipp = Snipp.find(params[:id])
+    @snipp.destroy
+    redirect_to root_path
+  end
+
   private
 
   def snipp_params
