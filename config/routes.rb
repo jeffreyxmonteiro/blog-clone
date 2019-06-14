@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root to: 'users#current_user_home'
+    resources :snipps, only: [:new, :create]
   end
 
   unauthenticated :user do
