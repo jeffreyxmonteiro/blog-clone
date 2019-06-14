@@ -7,8 +7,11 @@ class SnippsController < ApplicationController
   def create
     @snipp = Snipp.new(snipp_params)
     @snipp.user = User.find(params[:user_id])
-    @snipp.save
-    redirect_to root_path
+    if @snipp.save
+      redirect_to root_path, notice: 'Your snipp has been created fam.'
+    else
+      redirect_to new_user_snipp_path, notice: 'Please fill out all the fields.'
+    end
   end
 
   private
