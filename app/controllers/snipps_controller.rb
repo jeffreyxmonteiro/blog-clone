@@ -8,6 +8,7 @@ class SnippsController < ApplicationController
     @snipp = Snipp.new(snipp_params)
     @snipp.user = User.find(params[:user_id])
     @snipp.save
+    redirect_to root_path
   end
 
   private

@@ -1,0 +1,12 @@
+<h1>Make New Snipp Form</h1>
+
+<%= simple_form_for [@user, @snipp] do |f| %>
+  <%= f.input :medium %>
+  <%= f.input :quotation %>
+  <%= f.input :takeaway %>
+  <%= f.input :quoter %>
+  <%= f.input :source %>
+  <%= f.submit "add snipp", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Home", root_path %>
