@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root to: 'users#current_user_home'
-    resources :snipps, only: [:new, :create]
   end
 
   unauthenticated :user do
@@ -14,7 +13,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: :contact
   get 'about', to: 'pages#about', as: :about
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    resources :snipps, only: [:new, :create]
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
