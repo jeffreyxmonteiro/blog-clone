@@ -1,0 +1,13 @@
+<h1>User Profile Page</h1>
+Current User's ID is <%= @user.id %>
+<p>Current User's Name is <%= @user.fname %> <%= @user.lname %></p>
+<h2>List of Snipps</h2>
+<%= link_to "Create Snipp", new_user_snipp_path(@user) %>
+<% @snipps.each do |snipp| %>
+  <p>Medium: <%= snipp.medium %></p>
+  <p>Quotation: <%= snipp.quotation %></p>
+  <p>Quoter: <%= snipp.quoter %></p>
+  <p>Takeaway: <%= snipp.takeaway %></p>
+  <p>Source: <%= snipp.source %></p>
+  <p><%= link_to "Delete", snipp_path(snipp), method: :delete %></p>
+<% end %>
