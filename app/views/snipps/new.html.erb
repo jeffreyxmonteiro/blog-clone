@@ -3,15 +3,26 @@
 <%= simple_form_for [@user, @snipp] do |f| %>
   <%= f.error_notification %>
   <%= f.input :medium,
-                required: true %>
+                required: true,
+                collection: ["Podcast", "Tweet", "Book", "Video", "Online Article", "Newsletter", "Other"],
+                selected: "Podcast",
+                label: "Select medium"%>
   <%= f.input :quotation,
-                required: true %>
-  <%= f.input :takeaway,
-                required: true %>
+                required: true,
+                label: "What was the Snipp?",
+                placeholder: 'Everyone has a movie of their lives playing in their head' %>
   <%= f.input :quoter,
-                required: true %>
+                required: true,
+                label: "Who said it?",
+                placeholder: 'Reid Hoffman' %>
+  <%= f.input :takeaway,
+                required: true,
+                label: "What was your takeaway?",
+                placeholder: 'I need to set up my team to be the heroes of their own personal journey' %>
   <%= f.input :source,
-                required: true %>
+                required: true,
+                label: "Insert a link to the original source.",
+                placeholder: 'https://mastersofscale.com/#/reid-hoffman-make-everyone-a-hero/' %>
   <%= f.submit "add snipp", class: "btn btn-primary" %>
 <% end %>
 
