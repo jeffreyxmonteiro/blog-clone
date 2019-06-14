@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @snipps = Snipp.all
+    @snipps = current_user.snipps.all
   end
 
   def current_user_home
