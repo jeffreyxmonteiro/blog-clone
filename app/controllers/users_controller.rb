@@ -4,6 +4,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @snipps = current_user.snipps.all
+     @search = params["search"]
+    if @search.present?
+      @name = @search["name"]
+      @snipps = Snipp.where(name: @name)
+    end
   end
 
   def current_user_home
