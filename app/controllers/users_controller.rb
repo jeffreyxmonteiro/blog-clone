@@ -5,7 +5,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # @snipps = current_user.snipps.all
     if params[:search].present?
-      @snipps = Snipp.search_snipps(params[:search])
+      if Snipp.search_snipps(params[:search]).count > 0
+        @snipps = Snipp.search_snipps(params[:search])
+      else
+        @snipps = current_user.snipps.all
+      end
     else
       @snipps = current_user.snipps.all
     end
