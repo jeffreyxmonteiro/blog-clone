@@ -2,10 +2,11 @@
 Current User's ID is <%= @user.id %>
 <p>Current User's Name is <%= @user.fname %> <%= @user.lname %></p>
 <h2>List of Snipps</h2>
-<%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :quoter, input_html: {value: ""} %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
-<% end %>
+
+<%#= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%#= f.input :quoter, input_html: {value: ""} %>
+  <%#= f.submit "Search", class: "btn btn-primary" %>
+<%# end %>
 
 
 <%= link_to "Create Snipp", new_user_snipp_path(@user) %>
