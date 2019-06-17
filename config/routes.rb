@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   authenticated :user do
-    root to: 'users#current_user_home'
+     root to: 'users#current_user_home'
   end
 
   unauthenticated :user do
