@@ -1,13 +1,16 @@
-<h2>Library</h2>
 
-<br>
+<div class="header-content">
+  <h4>Welcome to <%= current_user.fname %> <%= current_user.lname %>'s  Snipps Library</h4>
 
-<%= form_tag(user_path, method: :get) do %>
-<%= text_field_tag(:search, params[:search]) %>
-<%= submit_tag("search") %>
-<% end %>
+  <br>
 
-<br>
+  <%= form_tag(user_path, method: :get) do %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag("search") %>
+  <% end %>
+
+  <br>
+</div>
 
 <a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>>
   <div class="create-snipp-btn">
@@ -20,6 +23,7 @@
   </div>
 </a>
 
+<br>
 <br>
 
 <div class="snipp-cards">
