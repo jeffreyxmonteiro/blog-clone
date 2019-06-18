@@ -80,3 +80,35 @@ h1, h2, h3, h4 {
 .medium-icon {
   height: 25px;
 }
+
+/* ------ Create Snipp Button ------ */
+
+.create-snipp-btn {
+  width: 175px;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #EB56BB;
+  box-shadow: 0px 10px 40px -10px rgba(255,0,131,0.5);
+  color: white;
+}
+
+.btn-icon {
+  float: left;
+  font-size: 130%;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding: 7.5px 0;
+}
+
+.btn-copy {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 10.5px 0;
+}
+
+.snipp-btn-link:hover {
+  text-decoration: none;
+  .create-snipp-btn {
+    opacity: .8;
+  }
+}
