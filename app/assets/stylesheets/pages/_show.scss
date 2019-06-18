@@ -1,0 +1,25 @@
+/*---------------------------------------------*/
+/* Basic Setup */
+/*---------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  color: #4a4a4a;
+  font-family: 'Oswald', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  letter-spacing: 1px;
+}
+
+/* ------ Headings ------ */
+
+h1, h2, h3, h4 {
+  letter-spacing: 1px;
+  font-family: 'Merriweather', 'Arial', sans-serif;
+}
