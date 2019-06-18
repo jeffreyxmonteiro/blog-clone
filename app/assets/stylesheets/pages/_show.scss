@@ -15,7 +15,7 @@ html, body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   letter-spacing: 1px;
-  background: #f7f7f7;
+  background: #fcfcfc;
 }
 
 /* ------ Headings ------ */
@@ -27,8 +27,42 @@ h1, h2, h3, h4 {
 
 /* ------ Snipp Card Library ------ */
 
+.snipp-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .snipp-card {
   border: 1px solid black;
   background-color: #F1F3F4;
-  width: 33%;
+  width: 600px;
+  height: 200px;
+  margin-bottom: 60px;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.snipp-quotation {
+  font-family: 'Merriweather', 'Arial', sans-serif;
+  font-size: 105%;
+  position: absolute;
+  top: 50px;
+}
+
+.snipp-quoter {
+  font-size: 85%;
+  position: absolute;
+  top: 145px;
+}
+
+.snipp-more-options {
+  position: absolute;
+  left: 525px;
+}
+
+.snipp-medium {
+  position: absolute;
+  left: 15px;
 }
