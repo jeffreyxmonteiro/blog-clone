@@ -18,7 +18,7 @@
         <%= snipp.medium %>
       </div>
       <div class="snipp-more-options">
-        <%= link_to "Delete", snipp_path(snipp), method: :delete %>
+        <%= link_to "<ion-icon name='trash'></ion-icon>".html_safe, snipp_path(snipp), method: :delete %>
       </div>
       <div class="snipp-quotation">
         <p>"<%= snipp.quotation %>"</p>

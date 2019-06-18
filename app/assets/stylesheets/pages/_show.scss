@@ -59,7 +59,14 @@ h1, h2, h3, h4 {
 
 .snipp-more-options {
   position: absolute;
-  left: 525px;
+  left: 565px;
+  ion-icon {
+    color: #4a4a4a;
+    opacity: .6;
+  }
+  ion-icon:hover {
+    opacity: 1;
+  }
 }
 
 .snipp-medium {
