@@ -34,21 +34,22 @@ h1, h2, h3, h4 {
 }
 
 .snipp-card {
-  border: 1px solid black;
+  border: .75px solid #4a4a4a;
   background-color: #F1F3F4;
   width: 600px;
   height: 220px;
   margin-bottom: 60px;
-  padding: 10px;
+  padding: 15px;
   position: relative;
   border-radius: 5px;
+  box-shadow: 0 10px 10px #efefef;
 }
 
 .snipp-quotation {
   font-family: 'Merriweather', 'Arial', sans-serif;
-  font-size: 95%;
+  font-size: 90%;
   position: absolute;
-  top: 50px;
+  top: 60px;
 }
 
 .snipp-quoter {
@@ -61,6 +62,7 @@ h1, h2, h3, h4 {
 .snipp-more-options {
   position: absolute;
   left: 565px;
+  top: 15px;
   ion-icon {
     color: #4a4a4a;
     opacity: .6;
@@ -72,5 +74,9 @@ h1, h2, h3, h4 {
 
 .snipp-medium {
   position: absolute;
-  left: 15px;
+  left: 20px;
+  top: 10px;
+}
+.medium-icon {
+  height: 25px;
 }

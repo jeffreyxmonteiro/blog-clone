@@ -15,7 +15,7 @@
   <% @snipps.each do |snipp| %>
     <div class="snipp-card">
       <div class="snipp-medium">
-        <%= snipp.medium %>
+        <%= medium_helper snipp.medium %>
       </div>
       <div class="snipp-more-options">
         <%= link_to "<ion-icon name='trash'></ion-icon>".html_safe, snipp_path(snipp), method: :delete %>
