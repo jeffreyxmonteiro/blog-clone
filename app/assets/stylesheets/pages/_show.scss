@@ -37,7 +37,7 @@ h1, h2, h3, h4 {
   border: 1px solid black;
   background-color: #F1F3F4;
   width: 600px;
-  height: 200px;
+  height: 220px;
   margin-bottom: 60px;
   padding: 10px;
   position: relative;
@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 
 .snipp-quotation {
   font-family: 'Merriweather', 'Arial', sans-serif;
-  font-size: 105%;
+  font-size: 95%;
   position: absolute;
   top: 50px;
 }
@@ -54,7 +54,8 @@ h1, h2, h3, h4 {
 .snipp-quoter {
   font-size: 85%;
   position: absolute;
-  top: 145px;
+  top: 170px;
+  text-transform: capitalize;
 }
 
 .snipp-more-options {
