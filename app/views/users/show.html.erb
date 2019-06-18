@@ -9,10 +9,16 @@
 
 <%= link_to "Create Snipp", new_user_snipp_path(@user) %>
 <% @snipps.each do |snipp| %>
-  <p>Medium: <%= snipp.medium %></p>
-  <p>Quotation: <%= snipp.quotation %></p>
-  <p>Quoter: <%= snipp.quoter %></p>
-  <p>Takeaway: <%= snipp.takeaway %></p>
-  <p>Source: <%= snipp.source %></p>
-  <p><%= link_to "Delete", snipp_path(snipp), method: :delete %></p>
+  <div class="snipp-card">
+    <div class="snipp-quotation"></div>
+    <div class="snipp-quoter"></div>
+    <div class="snipp-more-options"></div>
+    <div class="snipp-medium"></div>
+    <p>Medium: <%= snipp.medium %></p>
+    <p>Quotation: <%= snipp.quotation %></p>
+    <p>Quoter: <%= snipp.quoter %></p>
+    <p>Takeaway: <%= snipp.takeaway %></p>
+    <p>Source: <%= snipp.source %></p>
+    <p><%= link_to "Delete", snipp_path(snipp), method: :delete %></p>
+  </div>
 <% end %>
