@@ -4,37 +4,30 @@
 
   <br>
 
-  <%= form_tag(user_path, method: :get) do %>
-  <%= text_field_tag(:search, params[:search]) %>
-  <%= submit_tag("search") %>
-  <% end %>
+
+  <div class="search-form-container">
+    <ion-icon name="ios-search"></ion-icon>
+    <%= form_tag(user_path, method: :get) do %>
+      <%= text_field_tag 'search', nil, class: 'searchbar', placeholder: 'Search Snipps' %>
+    <% end %>
+  </div>
 
   <br>
 
-
-
-<br>
-
-<div class="container">
-  <input id="searchBar" class="searchbar" type="text" placeholder="Search...">
-  <a id="btnSearch" class="btn-search"><i class="fa fa-search"></i></a>
 </div>
 
-<br>
-
-
+<div class="button-placement">
+  <a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>>
+    <div class="create-snipp-btn">
+      <div class="btn-icon">
+        <ion-icon name="cut"></ion-icon>
+      </div>
+      <div class="btn-copy">
+        Create Snipp
+      </div>
+    </div>
+  </a>
 </div>
-
-<a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>>
-  <div class="create-snipp-btn">
-    <div class="btn-icon">
-      <ion-icon name="cut"></ion-icon>
-    </div>
-    <div class="btn-copy">
-      Create Snipp
-    </div>
-  </div>
-</a>
 
 <br>
 <br>
