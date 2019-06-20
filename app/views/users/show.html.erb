@@ -36,10 +36,10 @@
         <%= link_to "<ion-icon name='trash'></ion-icon>".html_safe, snipp_path(snipp), method: :delete %>
       </div>
       <div class="snipp-quotation">
-        <p>"<%= snipp.quotation %>"</p>
+        "<%= quotation_helper snipp.quotation %>"
       </div>
       <div class="snipp-quoter">
-        <p>-<%= snipp.quoter %></p>
+        -<%= snipp.quoter %>
       </div>
     </div>
   <% end %>

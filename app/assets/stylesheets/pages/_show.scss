@@ -43,13 +43,16 @@ h1, h2, h3, h4 {
   position: relative;
   border-radius: 5px;
   box-shadow: 0 10px 10px #efefef;
+  word-break: break-all;
 }
 
 .snipp-quotation {
   font-family: 'Merriweather', 'Arial', sans-serif;
   font-size: 90%;
-  position: absolute;
-  top: 60px;
+  position: relative;
+  top: 50px;
+  word-break: break-word;
+  line-height: 160%;
 }
 
 .snipp-quoter {
@@ -116,6 +119,7 @@ h1, h2, h3, h4 {
 
 
 /* ------ Create Snipp Button ------ */
+
 
 /*---------------------------------------------*/
 /* Header */

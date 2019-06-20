@@ -17,6 +17,14 @@ module ApplicationHelper
       image_tag("podcast-medium.png", class: "medium-icon")
     end
   end
+
+  def quotation_helper quotation
+    if quotation.split("").length > 125
+      "#{quotation[0..124]}..."
+    else
+      quotation
+    end
+  end
 end
 
 
