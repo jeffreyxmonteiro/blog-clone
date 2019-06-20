@@ -1,0 +1,161 @@
+/*---------------------------------------------*/
+/* Basic Setup */
+/*---------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  color: #4a4a4a;
+  font-family: 'Oswald', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  letter-spacing: 1px;
+  background: #fcfcfc;
+}
+
+/* ------ Headings ------ */
+
+h1, h2, h3, h4 {
+  letter-spacing: 1px;
+  font-family: 'Merriweather', 'Arial', sans-serif;
+}
+
+/* ------ Snipp Card Library ------ */
+
+.snipp-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.snipp-card {
+  border: .75px solid #4a4a4a;
+  background-color: #F1F3F4;
+  width: 600px;
+  height: 220px;
+  margin-bottom: 60px;
+  padding: 15px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px #efefef;
+  word-break: break-all;
+}
+
+.snipp-quotation {
+  font-family: 'Merriweather', 'Arial', sans-serif;
+  font-size: 90%;
+  position: relative;
+  top: 50px;
+  word-break: break-word;
+  line-height: 160%;
+}
+
+.snipp-quoter {
+  font-size: 85%;
+  position: absolute;
+  top: 170px;
+  text-transform: capitalize;
+}
+
+.snipp-more-options {
+  position: absolute;
+  left: 565px;
+  top: 15px;
+  ion-icon {
+    color: #4a4a4a;
+    opacity: .6;
+  }
+  ion-icon:hover {
+    opacity: 1;
+  }
+}
+
+.snipp-medium {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+.medium-icon {
+  height: 25px;
+}
+
+/* ------ Create Snipp Button ------ */
+
+.create-snipp-btn {
+  width: 180px;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #EB56BB;
+  box-shadow: 0px 10px 40px -10px rgba(255,0,131,0.5);
+  color: white;
+  display: inline-block;
+}
+
+.btn-icon {
+  float: left;
+  font-size: 130%;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding: 7.5px 0;
+}
+
+.btn-copy {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 10.5px 0;
+}
+
+.snipp-btn-link:hover {
+  text-decoration: none;
+  .create-snipp-btn {
+    opacity: .8;
+  }
+}
+
+.button-placement {
+  display: flex;
+  justify-content: center;
+}
+
+/* ------ Search------ */
+
+.search-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar {
+    color: #4a4a4a;
+    padding: 6px 10px;
+    width: 400px;
+    border: none;
+    margin-top: 1px;
+    border-bottom: #a0a0a0 solid 2px;
+    background-color: #fcfcfc;
+    outline: none;
+}
+
+.searchbar::placeholder {
+    color: #4a4a4a;
+    transition: 0.2s;
+}
+
+.search-form-container ion-icon {
+  font-size: 160%;
+  margin-right: 5px;
+}
+
+/*---------------------------------------------*/
+/* Header */
+/*---------------------------------------------*/
+
+.header-content {
+  text-align: center;
+}

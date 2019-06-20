@@ -1,29 +1,55 @@
-<h1>User Profile Page</h1>
-Current User's ID is <%= @user.id %>
-<p>Current User's Name is <%= @user.fname %> <%= @user.lname %></p>
-<h2>List of Snipps</h2>
 
-<%#= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%#= f.input :quoter, input_html: {value: ""} %>
-  <%#= f.submit "Search", class: "btn btn-primary" %>
-<%# end %>
+<div class="header-content">
+  <br>
+  <br>
+  <h4>Welcome to <%= current_user.fname %> <%= current_user.lname %>'s  Snipps Library</h4>
 
-<!-- <input type="text" name="query" id="query" placeholder="I want to find…">
-<input type="submit" name="commit" value="Search"> -->
+  <br>
 
-<%= form_tag(user_path, method: :get) do %>
-<%= text_field_tag(:search, params[:search]) %>
-<%= submit_tag("search") %>
-<% end %>
+
+  <div class="search-form-container">
+    <ion-icon name="ios-search"></ion-icon>
+    <%= form_tag(user_path, method: :get) do %>
+      <%= text_field_tag 'search', nil, class: 'searchbar', placeholder: 'Search Snipps' %>
+    <% end %>
+  </div>
+
+  <br>
+  <br>
+
+</div>
+
+<div class="button-placement">
+  <a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>>
+    <div class="create-snipp-btn">
+      <div class="btn-icon">
+        <ion-icon name="cut"></ion-icon>
+      </div>
+      <div class="btn-copy">
+        Create Snipp
+      </div>
+    </div>
+  </a>
+</div>
 
 <br>
+<br>
 
-<%= link_to "Create Snipp", new_user_snipp_path(@user) %>
-<% @snipps.each do |snipp| %>
-  <p>Medium: <%= snipp.medium %></p>
-  <p>Quotation: <%= snipp.quotation %></p>
-  <p>Quoter: <%= snipp.quoter %></p>
-  <p>Takeaway: <%= snipp.takeaway %></p>
-  <p>Source: <%= snipp.source %></p>
-  <p><%= link_to "Delete", snipp_path(snipp), method: :delete %></p>
-<% end %>
+<div class="snipp-cards">
+  <% @snipps.each do |snipp| %>
+    <div class="snipp-card">
+      <div class="snipp-medium">
+        <%= medium_helper snipp.medium %>
+      </div>
+      <div class="snipp-more-options">
+        <%= link_to "<ion-icon name='trash'></ion-icon>".html_safe, snipp_path(snipp), method: :delete %>
+      </div>
+      <div class="snipp-quotation">
+        "<%= quotation_helper snipp.quotation %>"
+      </div>
+      <div class="snipp-quoter">
+        -<%= snipp.quoter %>
+      </div>
+    </div>
+  <% end %>
+</div>
