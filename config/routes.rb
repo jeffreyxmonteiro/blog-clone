@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :snipps, only: [:new, :create]
   end
 
-  resources :snipps, only: [:destroy]
+  resources :snipps, only: [:show, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

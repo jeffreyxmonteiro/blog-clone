@@ -1,0 +1,13 @@
+<%= link_to(root_path, class: 'form-back-btn') do %>
+  <div class="back-icon-placement"><ion-icon name="ios-arrow-back"></div>
+  <div class="back-text-placement">Back to Library </div>
+<% end %>
+
+<br>
+
+<p>Greeting: <%= current_user.fname %> show page</p>
+
+<p>Quotation: <%= @snipp.quotation %></p>
+<p>Quoter: <%= @snipp.quoter %></p>
+
+

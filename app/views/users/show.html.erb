@@ -48,7 +48,7 @@
         "<%= quotation_helper snipp.quotation %>"
       </div>
       <div class="snipp-quoter">
-        -<%= snipp.quoter %>
+        -<%= link_to snipp.quoter, snipp_path(snipp) %>
       </div>
     </div>
   <% end %>
