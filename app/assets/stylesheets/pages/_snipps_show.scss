@@ -1,0 +1,14 @@
+.snipp-show-container {
+  display: flex;
+  justify-content: center;
+}
+
+.snipp-show-card {
+  border: .75px solid #4a4a4a;
+  background-color: #F1F3F4;
+  box-shadow: 0 10px 10px #efefef;
+  word-break: break-all;
+  width: 60%;
+  padding: 30px 20px;
+  border-radius: 5px;
+}

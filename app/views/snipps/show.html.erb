@@ -7,7 +7,29 @@
 
 <p>Greeting: <%= current_user.fname %> show page</p>
 
-<p>Quotation: <%= @snipp.quotation %></p>
-<p>Quoter: <%= @snipp.quoter %></p>
+<div class="snipp-show-container">
+  <div class="snipp-show-card">
 
+    <div class="snipp-show-more-options-section">
+      <div class="snipp-show-more-options">
+        <ion-icon name="ios-more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="snipp-show-snipp-section">
+      <div class="snipp-show-quotation"><p>Quotation: <%= @snipp.quotation %></p></div>
+      <div class="snipp-show-quoter"><p>Quoter: <%= @snipp.quoter %></p></div>
+    </div>
+
+    <div class="snipp-show-takeaway-section">
+      <div class="snipp-show-takeaway"><p>Takeway: <%= @snipp.takeaway %></p></div>
+    </div>
+
+    <div class="snipp-show-source-section">
+      <div class="snipp-show-medium"><p>Medium: <%= @snipp.medium %></p></div>
+      <div class="snipp-show-source"><p>Source: <%= @snipp.source %></p></div>
+    </div>
+
+  </div>
+</div>
 
