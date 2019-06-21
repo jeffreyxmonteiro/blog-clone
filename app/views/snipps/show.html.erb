@@ -3,10 +3,6 @@
   <div class="back-text-placement">Back to Library </div>
 <% end %>
 
-<br>
-
-<p>Greeting: <%= current_user.fname %> show page</p>
-
 <div class="snipp-show-container">
   <div class="snipp-show-card">
 
@@ -26,7 +22,7 @@
     </div>
 
     <div class="snipp-show-source-section">
-      <a class="snipp-source-btn-link" target="_blank" href=<%="#{@snipp.source}"%>></a>
+      <a class="snipp-source-btn-link" target="_blank" href=<%="#{@snipp.source}"%>>
         <div class="snipp-show-source-btn">
           <div class="snipp-show-medium"><%= medium_helper @snipp.medium %></div>
           <div class="snipp-show-source">View Original Source</div>
