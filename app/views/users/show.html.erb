@@ -38,6 +38,9 @@
 <div class="snipp-cards">
   <% @snipps.each do |snipp| %>
     <div class="snipp-card">
+      <a class="snipp-card-click-section" href=<%="#{snipp_path(snipp)}"%>>
+        <div class="snipp-card-clickable-section"></div>
+      </a>
       <div class="snipp-medium">
         <%= medium_helper snipp.medium %>
       </div>

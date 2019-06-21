@@ -1,0 +1,35 @@
+<%= link_to(root_path, class: 'form-back-btn') do %>
+  <div class="back-icon-placement"><ion-icon name="ios-arrow-back"></div>
+  <div class="back-text-placement">Back to Library </div>
+<% end %>
+
+<div class="snipp-show-container">
+  <div class="snipp-show-card">
+
+    <div class="snipp-show-more-options-section">
+      <div class="snipp-show-more-options">
+        <ion-icon name="ios-more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="snipp-show-snipp-section">
+      <div class="snipp-show-quotation">"<%= @snipp.quotation %>"</div>
+      <div class="snipp-show-quoter">-<%= @snipp.quoter %></div>
+    </div>
+
+    <div class="snipp-show-takeaway-section">
+      <div class="snipp-show-takeaway"><%= @snipp.takeaway %></div>
+    </div>
+
+    <div class="snipp-show-source-section">
+      <a class="snipp-source-btn-link" target="_blank" href=<%="#{@snipp.source}"%>>
+        <div class="snipp-show-source-btn">
+          <div class="snipp-show-medium"><%= medium_helper @snipp.medium %></div>
+          <div class="snipp-show-source">View Original Source</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+

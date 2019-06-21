@@ -20,6 +20,10 @@ class SnippsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @snipp = Snipp.find(params[:id])
+  end
+
   private
 
   def snipp_params

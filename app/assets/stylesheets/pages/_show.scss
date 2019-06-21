@@ -27,6 +27,13 @@ h1, h2, h3, h4 {
 
 /* ------ Snipp Card Library ------ */
 
+.snipp-card-clickable-section {
+  height: 200px;
+  width: 550px;
+  position: absolute;
+  display: block;
+}
+
 .snipp-cards {
   display: flex;
   justify-content: space-evenly;
