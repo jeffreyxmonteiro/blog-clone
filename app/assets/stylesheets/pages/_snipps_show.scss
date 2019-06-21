@@ -1,3 +1,5 @@
+/* ------ Snipp Card ------ */
+
 .snipp-show-container {
   display: flex;
   justify-content: center;
@@ -9,6 +11,89 @@
   box-shadow: 0 10px 10px #efefef;
   word-break: break-all;
   width: 60%;
-  padding: 30px 20px;
+  padding: 30px 25px;
   border-radius: 5px;
+}
+
+/* ------ Options Section ------ */
+
+.snipp-show-more-options-section {
+  text-align: right;
+  font-size: 180%;
+  margin-right: 15px;
+}
+
+/* ------Snipp Section ------ */
+
+.snipp-show-snipp-section {
+  padding: 20px;
+}
+
+.snipp-show-quotation {
+  font-family: 'Merriweather', 'Arial', sans-serif;
+  word-break: break-word;
+  line-height: 160%;
+  font-size: 110%;
+}
+
+.snipp-show-quoter {
+  margin-top: 20px;
+  font-size: 90%;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+}
+
+/* ------ Takeaways Section ------ */
+
+.snipp-show-takeaway-section {
+  border-top: .75px solid #4a4a4a;
+  border-bottom: .75px solid #4a4a4a;
+  text-align: center;
+  margin: 20px 40px;
+}
+
+.snipp-show-takeaway {
+  margin: 25px 55px;
+  line-height: 160%;
+  word-break: break-word;
+  font-size: 110%;
+  letter-spacing: 2px;
+}
+
+/* ------ Source Section ------ */
+
+.snipp-show-source-section {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.snipp-source-btn-link:hover {
+  text-decoration: none;
+
+  .snipp-show-source-btn {
+    opacity: .8;
+  }
+}
+
+.snipp-show-source-btn {
+  width: 260px;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #F1F3F4;
+  box-shadow: 0px 10px 40px -10px rgba(74,74,74,0.5);
+  color: #4a4a4a;
+  display: inline-block;
+}
+
+.snipp-show-medium {
+  float: left;
+  margin-right: 10px;
+  margin-top: 7px;
+  margin-left: 18px;
+}
+
+.snipp-show-source {
+  text-transform: uppercase;
+  margin-top: 10px;
 }

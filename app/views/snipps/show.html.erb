@@ -17,17 +17,21 @@
     </div>
 
     <div class="snipp-show-snipp-section">
-      <div class="snipp-show-quotation"><p>Quotation: <%= @snipp.quotation %></p></div>
-      <div class="snipp-show-quoter"><p>Quoter: <%= @snipp.quoter %></p></div>
+      <div class="snipp-show-quotation">"<%= @snipp.quotation %>"</div>
+      <div class="snipp-show-quoter">-<%= @snipp.quoter %></div>
     </div>
 
     <div class="snipp-show-takeaway-section">
-      <div class="snipp-show-takeaway"><p>Takeway: <%= @snipp.takeaway %></p></div>
+      <div class="snipp-show-takeaway"><%= @snipp.takeaway %></div>
     </div>
 
     <div class="snipp-show-source-section">
-      <div class="snipp-show-medium"><p>Medium: <%= @snipp.medium %></p></div>
-      <div class="snipp-show-source"><p>Source: <%= @snipp.source %></p></div>
+      <a class="snipp-source-btn-link" target="_blank" href=<%="#{@snipp.source}"%>>
+        <div class="snipp-show-source-btn">
+          <div class="snipp-show-medium"><%= medium_helper @snipp.medium %></div>
+          <div class="snipp-show-source">View Original Source</div>
+        </div>
+      </a>
     </div>
 
   </div>
