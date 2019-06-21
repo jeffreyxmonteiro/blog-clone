@@ -20,7 +20,7 @@
 </div>
 
 <div class="button-placement">
-  <a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>>
+  <a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>></a>
     <div class="create-snipp-btn">
       <div class="btn-icon">
         <ion-icon name="cut"></ion-icon>
@@ -38,6 +38,9 @@
 <div class="snipp-cards">
   <% @snipps.each do |snipp| %>
     <div class="snipp-card">
+      <a class="snipp-card-click-section" href=<%="#{snipp_path(snipp)}"%>>
+        <div class="snipp-card-clickable-section"></div>
+      </a>
       <div class="snipp-medium">
         <%= medium_helper snipp.medium %>
       </div>
@@ -48,7 +51,7 @@
         "<%= quotation_helper snipp.quotation %>"
       </div>
       <div class="snipp-quoter">
-        -<%= link_to snipp.quoter, snipp_path(snipp) %>
+        -<%= snipp.quoter %>
       </div>
     </div>
   <% end %>
