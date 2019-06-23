@@ -24,6 +24,16 @@ class SnippsController < ApplicationController
     @snipp = Snipp.find(params[:id])
   end
 
+  def edit
+    @snipp = Snipp.find(params[:id])
+  end
+
+  def update
+    @snipp = Snipp.find(params[:id])
+    @snipp.update(snipp_params)
+    redirect_to snipp_path(@snipp), notice: 'Your snipp has been updated fam.'
+  end
+
   private
 
   def snipp_params
