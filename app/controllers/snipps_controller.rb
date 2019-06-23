@@ -1,4 +1,6 @@
 class SnippsController < ApplicationController
+  before_action :only_see_own_snipp, only: [:show, :edit, :update, :destroy]
+
   def new
     @user = User.find(params[:user_id])
     @snipp = Snipp.new
@@ -38,5 +40,14 @@ class SnippsController < ApplicationController
 
   def snipp_params
     params.require(:snipp).permit(:medium, :quotation, :takeaway, :quoter, :source)
+  end
+
+   private
+
+  def only_see_own_snipp
+    @snipp = Snipp.find(params[:id])
+    if current_user.id != @snipp.user.id
+      redirect_to root_path, notice: "Sorry, but you are only allowed to view your own snipps."
+    end
   end
 end
