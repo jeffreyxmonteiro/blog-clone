@@ -33,8 +33,11 @@ class SnippsController < ApplicationController
 
   def update
     @snipp = Snipp.find(params[:id])
-    @snipp.update(snipp_params)
-    redirect_to snipp_path(@snipp), notice: 'Your snipp has been updated fam.'
+    if @snipp.update(snipp_params)
+      redirect_to snipp_path(@snipp), notice: 'Your snipp has been updated fam.'
+    else
+      redirect_to edit_snipp_path(@snipp), notice: 'All fields must be fielded out.'
+    end
   end
 
   private

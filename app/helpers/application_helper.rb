@@ -14,7 +14,7 @@ module ApplicationHelper
     elsif medium == "Newsletter"
       image_tag("mail-medium.png", class: "medium-icon")
     elsif medium == "Other"
-      image_tag("podcast-medium.png", class: "medium-icon")
+      image_tag("other-medium.png", class: "medium-icon")
     end
   end
 
