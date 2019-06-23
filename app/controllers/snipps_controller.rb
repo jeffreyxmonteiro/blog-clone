@@ -1,5 +1,6 @@
 class SnippsController < ApplicationController
   before_action :only_see_own_snipp, only: [:show, :edit, :update, :destroy]
+  before_action :only_create_own_snipp, only: [:new, :create]
 
   def new
     @user = User.find(params[:user_id])
@@ -48,6 +49,12 @@ class SnippsController < ApplicationController
     @snipp = Snipp.find(params[:id])
     if current_user.id != @snipp.user.id
       redirect_to root_path, notice: "Sorry, but you are only allowed to view your own snipps."
+    end
+  end
+
+  def only_create_own_snipp
+    if current_user.id != params[:user_id].to_i
+      redirect_to root_path, notice: "Sorry, but you are only allowed to create your own snipp."
     end
   end
 end
