@@ -19,8 +19,8 @@ module ApplicationHelper
   end
 
   def quotation_helper quotation
-    if quotation.split("").length > 125
-      "#{quotation[0..124]}..."
+    if quotation.split("").length > 175
+      "#{quotation[0..174]}..."
     else
       quotation
     end
