@@ -166,3 +166,15 @@ h1, h2, h3, h4 {
 .header-content {
   text-align: center;
 }
+
+/*---------------------------------------------*/
+/* Drop-Down Menu for More */
+/*---------------------------------------------*/
+
+
+.caret-off::before {
+    display: none;
+}
+.caret-off::after {
+    display: none;
+}
