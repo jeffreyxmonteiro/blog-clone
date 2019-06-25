@@ -2,18 +2,6 @@
 <div class="header-content">
   <br>
 
-<div class="dropdown show">
-  <a class="dropdown-toggle caret-off" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <ion-icon name='ios-more'></ion-icon>
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Edit</a>
-    <a class="dropdown-item" href="#">Delete</a>
-    <%#= link_to "Delete", snipp_path(snipp), method: :delete, class: 'dropdown-item' %>
-  </div>
-</div>
-
 
   <br>
   <h4>Welcome to <%= current_user.fname %> <%= current_user.lname %>'s  Snipps Library</h4>
@@ -59,7 +47,16 @@
         <%= medium_helper snipp.medium %>
       </div>
       <div class="snipp-more-options">
-        <%= link_to "<ion-icon name='trash'></ion-icon>".html_safe, snipp_path(snipp), method: :delete %>
+        <div class="dropdown show">
+          <a class="dropdown-toggle caret-off" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <ion-icon name='ios-more'></ion-icon>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <%= link_to "Edit", edit_snipp_path(snipp), class: 'dropdown-item' %>
+            <%= link_to "Delete", snipp_path(snipp), method: :delete, class: 'dropdown-item' %>
+          </div>
+        </div>
       </div>
       <div class="snipp-quotation">
         "<%= quotation_helper snipp.quotation %>"

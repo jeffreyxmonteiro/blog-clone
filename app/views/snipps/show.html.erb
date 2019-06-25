@@ -8,7 +8,16 @@
 
     <div class="snipp-show-more-options-section">
       <div class="snipp-show-more-options">
-        <%= link_to "<ion-icon name='ios-more'></ion-icon>".html_safe, edit_snipp_path(@snipp) %>
+        <div class="dropdown show">
+          <a class="dropdown-toggle caret-off" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <ion-icon name='ios-more'></ion-icon>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <%= link_to "Edit", edit_snipp_path(@snipp), class: 'dropdown-item' %>
+            <%= link_to "Delete", snipp_path(@snipp), method: :delete, class: 'dropdown-item' %>
+          </div>
+        </div>
       </div>
     </div>
 
