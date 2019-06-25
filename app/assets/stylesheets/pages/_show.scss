@@ -178,3 +178,14 @@ h1, h2, h3, h4 {
 .caret-off::after {
     display: none;
 }
+
+.dropdown-menu {
+  min-width: 100px;
+  background-color: #f7f9f9;
+  font-size: 80%;
+  border-radius: 4px;
+}
+
+.dropdown-item:hover {
+  opacity: .7;
+}
