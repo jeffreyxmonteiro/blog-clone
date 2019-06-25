@@ -30,3 +30,5 @@ group :development, :test do
 end
 
 gem 'pg_search', '~> 2.2'
+gem 'acts-as-taggable-on', '~> 6.0'
+

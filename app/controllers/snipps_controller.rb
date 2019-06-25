@@ -44,7 +44,7 @@ class SnippsController < ApplicationController
   private
 
   def snipp_params
-    params.require(:snipp).permit(:medium, :quotation, :takeaway, :quoter, :source)
+    params.require(:snipp).permit(:medium, :quotation, :takeaway, :quoter, :source, :tag_list)
   end
 
    private

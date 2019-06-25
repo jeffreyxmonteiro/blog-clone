@@ -189,3 +189,19 @@ h1, h2, h3, h4 {
 .dropdown-item:hover {
   opacity: .7;
 }
+
+/*---------------------------------------------*/
+/* Drop-Down Menu for More */
+/*---------------------------------------------*/
+.snipp-show-hashtags-container {
+  display: flex;
+}
+
+.snipp-show-hashtag-item {
+  border: .75px solid #4a4a4a;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 65%;
+  opacity: .6;
+}

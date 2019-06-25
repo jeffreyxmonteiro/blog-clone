@@ -27,6 +27,10 @@
                   required: true,
                   label: "Insert a link to the original source.",
                   placeholder: 'https://mastersofscale.com/#/reid-hoffman-make-everyone-a-hero/' %>
+    <%= f.input :tag_list,
+                  required: true,
+                  label: "Please separate each tag with a comma.",
+                  placeholder: 'startsups, tech, growth' %>
     <div class="form-btn-placement">
       <%= f.submit "Create Snipp", class: "snipp-form-btn" %>
     </div>

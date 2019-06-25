@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     else
       @snipps = current_user.snipps.all
     end
-
   end
 
   def current_user_home

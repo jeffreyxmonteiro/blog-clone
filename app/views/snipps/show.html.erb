@@ -39,6 +39,13 @@
       </a>
     </div>
 
+    <div class="snipp-show-hashtags-container">
+      <% @snipp.tag_list.each do |tag| %>
+        <div class="snipp-show-hashtag-item">
+          <%= tag %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
