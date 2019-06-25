@@ -14,6 +14,7 @@ class SnippsController < ApplicationController
       redirect_to root_path, notice: 'Your snipp has been created fam.'
     else
       redirect_to new_user_snipp_path, notice: 'Please fill out all the fields.'
+      # render 'new' undefined method `snipps_path' for #<#<Class:0x00007f97b3b2a078>:0x00007f97b3b28408>
     end
   end
 
