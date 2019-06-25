@@ -1,6 +1,6 @@
 class Snipp < ApplicationRecord
   include PgSearch
-  pg_search_scope :search_snipps, against: [ :quotation, :quoter ],
+  pg_search_scope :search_snipps, against: [ :quotation, :quoter, :takeaway ],
                   using: {
                     tsearch: { prefix: true }
                   }
