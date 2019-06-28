@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  acts_as_tagger
   has_many :snipps, dependent: :destroy
   validates_presence_of :fname, :lname
 end
