@@ -16,9 +16,28 @@
     <% end %>
   </div>
 
+<!-- Solution 1 for showing top tags -->
+<!-- Showing an empty array -->
   <br>
-  <%= current_user.owned_tags.most_used(3) %>
+  <%= current_user.owned_tags.most_used(3).each do |tag| %>
+    <%= tag.name %>
+  <% end %>
   <br>
+<!-- End of Solution 1 -->
+
+
+  <!-- Tags solution 2 for showing top tags -->
+  <!-- Error message for solution 2 Can't join 'ActsAsTaggableOn::Tag' to association named 'taggable'; perhaps you misspelled it?
+ -->
+
+  <br>
+  <%#= ActsAsTaggableOn::Tag.joins(:taggable).where(taggable: current_user.snipps)
+  .distinct.most_used(3).each do |tag| %>
+    <%#= tag.name %>
+  <%# end %>
+  <br>
+
+<!-- end of Solution 2 -->
 
 </div>
 
