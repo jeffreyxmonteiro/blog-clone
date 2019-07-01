@@ -17,8 +17,7 @@
   </div>
 
   <br>
-  <%= ActsAsTaggableOn::Tag.joins(:taggable).where(taggable: current_user.journals)
-  .distinct.most_used(3) %>
+  <%= current_user.owned_tags.most_used(3) %>
   <br>
 
 </div>
