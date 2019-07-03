@@ -10,7 +10,7 @@
   background-color: #F1F3F4;
   box-shadow: 0 10px 10px #efefef;
   word-break: break-all;
-  width: 60%;
+  width: 825px;
   padding: 30px 25px;
   border-radius: 5px;
   margin: 50px 0;
@@ -42,6 +42,7 @@
   word-break: break-word;
   line-height: 160%;
   font-size: 110%;
+  letter-spacing: 1px;
 }
 
 .snipp-show-quoter {
@@ -105,3 +106,101 @@
   text-transform: uppercase;
   margin-top: 10px;
 }
+
+/* ------ Mobile Responsive ------ */
+
+@media only screen and (max-width: 915px) {
+  .snipp-show-card { width: 725px; }
+
+  .snipp-show-quotation { font-size: 109%; }
+
+  .snipp-show-quoter { font-size: 89%; }
+
+  .snipp-show-takeaway { font-size: 109%; }
+
+}
+
+@media only screen and (max-width: 780px) {
+
+  .snipp-show-card { width: 625px; }
+
+  .snipp-show-quotation { font-size: 100%; }
+
+  .snipp-show-takeaway {
+    font-size: 105%;
+    margin: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 685px) {
+
+  .snipp-show-card { width: 525px; }
+
+  .snipp-show-quotation { font-size: 90%; }
+
+}
+
+@media only screen and (max-width: 575px) {
+
+  .snipp-show-card { width: 425px; }
+
+  .snipp-show-more-options-section { font-size: 170%; }
+
+  .snipp-show-quotation {
+    font-size: 80%;
+  }
+
+  .snipp-show-takeaway-section { margin: 20px 30px; }
+
+  .snipp-show-takeaway {
+    font-size: 95%;
+    letter-spacing: 1px;
+    margin: 25px 10px;
+  }
+
+}
+
+@media only screen and (max-width: 475px) {
+
+  .snipp-show-card { width: 325px; }
+
+  .snipp-show-quotation {
+    font-size: 65%;
+    letter-spacing: 0px;
+    line-height: 170%;
+  }
+
+  .snipp-show-quoter { font-size: 70%; }
+
+  .snipp-show-takeaway-section { margin: 20px 5px; }
+
+  .snipp-show-takeaway {
+    font-size: 70%;
+    letter-spacing: 1px;
+    margin: 15px 5px;
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+  .snipp-show-card { width: 280px; }
+
+  .snipp-show-snipp-section { padding: 10px; }
+
+  .snipp-show-quotation { font-size: 60%; }
+
+  .snipp-show-quoter {
+    font-size: 65%;
+    margin-left: 5px;
+  }
+
+    .snipp-show-source-btn {
+      width: 240px;
+      height: 45px;
+      font-size: 90%;
+    }
+
+}
+
