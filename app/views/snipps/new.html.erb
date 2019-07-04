@@ -30,6 +30,7 @@
     <%= f.input :tag_list,
                   required: true,
                   label: "Please separate each tag with a comma.",
+                  value: @snipp.all_tags_list,
                   placeholder: 'startsups, tech, growth' %>
     <div class="form-btn-placement">
       <%= f.submit "Create Snipp", class: "snipp-form-btn" %>
