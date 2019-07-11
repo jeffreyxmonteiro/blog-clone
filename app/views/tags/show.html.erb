@@ -1,20 +1,7 @@
-
-<div class="header-content">
-  <br>
-
-
-  <br>
-  <h4>Welcome to <%= current_user.fname %> <%= current_user.lname %>'s  Snipps Library</h4>
-
-  <br>
-
-
-  <div class="search-form-container">
-    <ion-icon name="ios-search"></ion-icon>
-    <%= form_tag(user_path, method: :get) do %>
-      <%= text_field_tag 'search', nil, class: 'searchbar', placeholder: 'Search Snipps' %>
-    <% end %>
-  </div>
+<%= link_to(root_path, class: 'form-back-btn') do %>
+  <div class="back-icon-placement"><ion-icon name="ios-arrow-back"></div>
+  <div class="back-text-placement">Back to Library </div>
+<% end %>
 
 <br>
 Top Tags
@@ -24,21 +11,13 @@ Top Tags
 <% end %>
 <br>
 <br>
-</div>
 
-<div class="button-placement">
-  <a class="snipp-btn-link" href=<%="#{new_user_snipp_path(@user)}"%>>
-    <div class="create-snipp-btn">
-      <div class="btn-icon">
-        <ion-icon name="cut"></ion-icon>
-      </div>
-      <div class="btn-copy">
-        Create Snipp
-      </div>
-    </div>
-  </a>
-</div>
-
+<br>
+All Tags
+<br>
+<% current_user.owned_tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag.name)%>
+<% end %>
 <br>
 <br>
 
