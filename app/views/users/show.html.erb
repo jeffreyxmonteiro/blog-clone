@@ -20,7 +20,7 @@
 Top Tags
 <br>
 <% current_user.owned_tags.most_used(3).each do |tag| %>
-    <%= tag.name %>
+    <%= link_to tag.name %>
 <% end %>
 <br>
 <br>

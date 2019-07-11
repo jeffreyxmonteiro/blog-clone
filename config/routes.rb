@@ -15,9 +15,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :snipps, only: [:new, :create]
+    get 'tags/:tag', to: 'users#current_user_home', as: :tag
   end
 
   resources :snipps, only: [:show, :edit, :update, :destroy]
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

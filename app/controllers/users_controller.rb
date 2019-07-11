@@ -3,13 +3,14 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # @snipps = current_user.snipps.all
     if params[:search].present?
       if Snipp.search_snipps(params[:search]).count > 0
-        @snipps = Snipp.search_snipps(params[:search])
+        @snipps = current_user.snipps.search_snipps(params[:search])
       else
         @snipps = current_user.snipps.all
       end
+    elsif params[:tag].present?
+      @snipps = current_user.snipps.tagged_with(params[:tag])
     else
       @snipps = current_user.snipps.all
     end
