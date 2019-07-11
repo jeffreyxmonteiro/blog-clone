@@ -15,8 +15,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     resources :snipps, only: [:new, :create]
-    get 'tags/:tag', to: 'users#current_user_home', as: :tag
   end
+  resources :tags, only: [:show]
 
   resources :snipps, only: [:show, :edit, :update, :destroy]
 
